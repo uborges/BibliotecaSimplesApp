@@ -122,15 +122,27 @@ namespace BibliotecaSimplesApp
             Livro livro2 = new Livro("Sapiens", 2011, catHistoria, "Yuval Noah Harari", "978-0062316097");
             Livro livro3 = new Livro("Clean Code", 2008, catProg, "Robert C. Martin", "978-0132350884");
             Livro livro4 = new Livro("O Guia do Mochileiro das Galáxias", 1979, catFiccao, "Douglas Adams", "978-0345391803");
-            livros.AddRange(new[] { livro1, livro2, livro3, livro4 });
+            Livro livro5 = new Livro("1984", 1949, catFiccao, "George Orwell", "978-0-452-28423-4");
+            Livro livro6 = new Livro("O Hobbit", 1937, catFiccao, "J.R.R. Tolkien", "978-0-618-00221-3");
+            Livro livro7 = new Livro("Estruturas de Dados e Algoritmos em C#", 2006, catProg, "Michael McMillan", "978-85-7522-367-1");
+            Livro livro8 = new Livro("The Pragmatic Programmer: Your Journey to Mastery", 1999, catProg, "Andrew Hunt & David Thomas", "978-0-201-61622-4");
+            Livro livro9 = new Livro("Uma Breve História do Século XX", 2005, catHistoria, "Geoffrey Blainey", "978-85-359-0839-5");
+            livros.AddRange(new[] { livro1, livro2, livro3, livro4, livro5, livro6, livro7, livro8, livro9 });
             catFiccao.AdicionarItem(livro1);
             catHistoria.AdicionarItem(livro2);
             catProg.AdicionarItem(livro3);
             catFiccao.AdicionarItem(livro4);
+            catFiccao.AdicionarItem(livro5);
+            catFiccao.AdicionarItem(livro6);
+            catProg.AdicionarItem(livro7);
+            catProg.AdicionarItem(livro8);
+            catHistoria.AdicionarItem(livro9);
 
-            Membro membro1 = new Membro("Alice Silva", "alice@email.com");
-            Membro membro2 = new Membro("Bruno Costa", "bruno@email.com");
-            membros.AddRange(new[] { membro1, membro2 });
+            Membro membro1 = new Membro("Josue Borges", "josue@email.com");
+            Membro membro2 = new Membro("Ruan Diego", "ruan@email.com");
+            Membro membro3 = new Membro("Vitor Hugo", "vitor@email.com");
+            Membro membro4 = new Membro("Pedro Augusto", "pedro@email.com");
+            membros.AddRange(new[] { membro1, membro2, membro3, membro4 });
         }
 
         private void AtualizarListas()
