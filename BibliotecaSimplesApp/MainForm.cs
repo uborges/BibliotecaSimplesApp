@@ -1,11 +1,10 @@
-﻿// Arquivo: MainForm.cs
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using BibliotecaSimplesApp.Models; // Adicionado para acessar os modelos
+using BibliotecaSimplesApp.Models;
 
 namespace BibliotecaSimplesApp
 {
@@ -43,16 +42,10 @@ namespace BibliotecaSimplesApp
 
         public MainForm()
         {
-            // O Visual Studio normalmente chama InitializeComponent() aqui,
-            // que é preenchido pelo designer.
-            // Para este exemplo, usamos nosso método customizado.
             InitializeComponentCustom();
             CarregarDadosIniciais();
             AtualizarListas();
         }
-
-        // Este método normalmente seria o conteúdo de MainForm.Designer.cs
-        // e chamado por InitializeComponent().
         private void InitializeComponentCustom()
         {
             this.Text = "Sistema de Biblioteca Simples";
@@ -114,7 +107,7 @@ namespace BibliotecaSimplesApp
             gbDetalhes.Controls.Add(rtbDetalhes);
 
             this.Controls.AddRange(new Control[] { gbCategorias, gbLivros, gbMembros, gbEmprestimos, gbDetalhes });
-            this.MinimumSize = new Size(950, 700); // Define um tamanho mínimo para evitar que os controles fiquem sobrepostos demais
+            this.MinimumSize = new Size(950, 700);
         }
 
 
@@ -151,7 +144,7 @@ namespace BibliotecaSimplesApp
             cmbCategoriaLivro.DisplayMember = "Nome";
 
             lstLivros.DataSource = null;
-            lstLivros.DataSource = livros.ToList(); // Usar ToList() para criar uma nova cópia para o DataSource
+            lstLivros.DataSource = livros.ToList(); // ToList() cria uma nova cópia para o DataSource
 
             lstMembros.DataSource = null;
             lstMembros.DataSource = membros.ToList();
@@ -201,8 +194,6 @@ namespace BibliotecaSimplesApp
                     txtISBNLivro.Text
                 );
                 livros.Add(novoLivro);
-                // A lógica de AdicionarItem na Categoria já cuida da associação bidirecional
-                // catSelecionada.AdicionarItem(novoLivro); // Removido pois o construtor do Livro já associa
 
                 txtTituloLivro.Clear();
                 txtAutorLivro.Clear();
@@ -217,7 +208,7 @@ namespace BibliotecaSimplesApp
         {
             if (!string.IsNullOrWhiteSpace(txtNomeMembro.Text) && !string.IsNullOrWhiteSpace(txtEmailMembro.Text))
             {
-                // Validação simples de email (pode ser melhorada)
+                // Validação de email
                 if (!txtEmailMembro.Text.Contains("@") || !txtEmailMembro.Text.Contains("."))
                 {
                     MessageBox.Show("Por favor, insira um email válido.", "Email Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
