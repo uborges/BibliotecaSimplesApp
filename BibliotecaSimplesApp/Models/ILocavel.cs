@@ -1,7 +1,7 @@
 ﻿using System;
 using BibliotecaSimplesApp.Models;
 
-namespace BibliotecaSimples.Models
+namespace BibliotecaSimplesApp.Models
 {
     public interface ILocavel
     {

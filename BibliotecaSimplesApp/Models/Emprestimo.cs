@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BibliotecaSimples.Models
+namespace BibliotecaSimplesApp.Models
 {
     public class Emprestimo
     {

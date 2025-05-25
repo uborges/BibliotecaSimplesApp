@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace BibliotecaSimples
+namespace BibliotecaSimplesApp
 {
     static class Program
     {

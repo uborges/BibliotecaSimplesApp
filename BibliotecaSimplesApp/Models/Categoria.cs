@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BibliotecaSimples.Models
+namespace BibliotecaSimplesApp.Models
 {
     public class Categoria
     {

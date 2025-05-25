@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using BibliotecaSimplesApp.Models;
 
-namespace BibliotecaSimples.Models
+namespace BibliotecaSimplesApp.Models
 {
     public class Membro
     {
