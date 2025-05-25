@@ -1,12 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BibliotecaSimplesApp.Models;
 
-namespace BibliotecaSimplesApp.Models
+namespace BibliotecaSimples.Models
 {
-    internal class ILocavel
+    public interface ILocavel
     {
+        bool EstaEmprestado { get; }
+        Membro EmprestadoPara { get; }
+        bool Emprestar(Membro membro);
+        bool Devolver();
+        DateTime? DataEmprestimo { get; }
+        DateTime? DataDevolucaoPrevista { get; }
     }
 }
